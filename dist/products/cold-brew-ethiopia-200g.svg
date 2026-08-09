@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="LX SHOT coffee pouch">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="LX SHOT cold brew or espresso package">
   <rect width="480" height="640" rx="40" fill="#0a0908"/>
   <rect x="44" y="44" width="392" height="552" rx="32" fill="#17120f" stroke="#b08d3f" stroke-width="3"/>
-  <rect x="122" y="98" width="236" height="332" rx="28" fill="#1f1712" stroke="#8a6a31" stroke-width="2"/>
-  <rect x="148" y="126" width="184" height="276" rx="20" fill="#0f0b08" stroke="#e3c07c" stroke-width="2"/>
-  <rect x="170" y="154" width="140" height="220" rx="14" fill="#241a11"/>
-  <rect x="138" y="454" width="204" height="92" rx="18" fill="#1b140f" stroke="#b08d3f" stroke-width="2"/>
-  <text x="240" y="494" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" letter-spacing="4" fill="#f4e4bc">COFFEE FORMAT</text>
-  <text x="240" y="520" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="2" fill="#b9a58f">MATTE PREMIUM POUCH</text>
+  <rect x="128" y="96" width="224" height="352" rx="28" fill="#1f1712" stroke="#8a6a31" stroke-width="2"/>
+  <rect x="154" y="128" width="172" height="286" rx="20" fill="#0f0b08" stroke="#e3c07c" stroke-width="2"/>
+  <rect x="178" y="156" width="124" height="230" rx="14" fill="#2a1d12"/>
+  <rect x="144" y="454" width="192" height="84" rx="18" fill="#1b140f" stroke="#b08d3f" stroke-width="2"/>
+  <text x="240" y="492" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" letter-spacing="4" fill="#f4e4bc">SPECIALTY FORMAT</text>
+  <text x="240" y="518" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="2" fill="#b9a58f">PREMIUM COFFEE PACKAGE</text>
   <g transform="translate(80 98) scale(0.8)">
   <rect x="0" y="0" width="160" height="60" rx="18" fill="#f5e3b3"/>
   <rect x="10" y="10" width="140" height="40" rx="12" fill="#0f0d09" stroke="#b08d3f" stroke-width="2"/>

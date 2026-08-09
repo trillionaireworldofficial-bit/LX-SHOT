@@ -486,7 +486,6 @@ function PackagingVisual({ product, compact = false }) {
   return (
     <div className={`package-visual ${compact ? 'compact' : ''}`}>
       <img src={resolveAssetPath(product.image)} alt={product.imageAlt} className="package-image" />
-      <img src={resolveAssetPath('/logo.png')} alt="" aria-hidden="true" className="package-logo" />
     </div>
   );
 }

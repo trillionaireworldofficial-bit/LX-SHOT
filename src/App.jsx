@@ -1,11 +1,20 @@
 import { useMemo, useState } from 'react';
-import { Link, NavLink, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, NavLink, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import { products } from './data/products';
-import { addToCart, calculateTotals, currency, formatCurrency, removeFromCart, updateQuantity } from './utils/cart';
+import { addToCart, calculateTotals, formatCurrency, removeFromCart, updateQuantity } from './utils/cart';
+import { resolveAssetPath } from './utils/assetPaths';
+
+const categoryOptions = ['All', 'Whole Bean', 'Ground Coffee', 'Instant Coffee', 'Coffee Pods', 'Coffee Sticks', 'Espresso Collection', 'Cold Brew', 'Reserve Collection', 'Gift Collection', 'Specialty Blend'];
+const collectionCards = [
+  { title: 'Signature Editions', description: 'Small-batch Arabica selected for clarity, balance, and calm precision.', badge: 'Limited release' },
+  { title: 'Reserve Series', description: 'Elevated single-origin expressions for slower rituals and gift-worthy presentation.', badge: 'Reserve' },
+  { title: 'Travel Ritual', description: 'Luxury coffee sticks and instant formats for polished on-the-go rituals.', badge: 'Travel' },
+  { title: 'Gift Presentation', description: 'Curated sets and gift boxes designed for thoughtful giving.', badge: 'Gift' }
+];
 
 function App() {
   const [cart, setCart] = useState([]);
-  const location = useLocation();
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const navigate = useNavigate();
 
   const cartItems = useMemo(() => cart.reduce((sum, item) => sum + item.quantity, 0), [cart]);
@@ -23,18 +32,15 @@ function App() {
     setCart((current) => removeFromCart(current, productId));
   };
 
-  const featuredProducts = products.filter((item) => item.featured);
-  const collections = [
-    { title: 'Signature Editions', description: 'Small-batch Arabica selected for clarity and precision.', badge: 'Limited release' },
-    { title: 'Reserve Series', description: 'Elevated single-origin expressions for slower rituals.', badge: 'Reserve' },
-    { title: 'Gift Presentation', description: 'Thoughtfully composed sets for special moments.', badge: 'Gift' }
-  ];
+  const featuredProducts = useMemo(() => products.filter((item) => item.featured).slice(0, 6), []);
+  const familyProducts = useMemo(() => products.filter((item) => item.collection !== 'Gift').slice(0, 6), []);
+  const visibleProducts = selectedCategory === 'All' ? products : products.filter((product) => product.category === selectedCategory);
 
   return (
     <div className="app-shell">
       <header className="site-header">
         <Link to="/" className="brand-mark" aria-label="LX SHOT home">
-          <img src="/logo.png" alt="LX SHOT logo" />
+          <img src={resolveAssetPath('/logo.png')} alt="LX SHOT logo" />
           <span>LX SHOT</span>
         </Link>
         <nav className="primary-nav" aria-label="Primary">
@@ -48,12 +54,12 @@ function App() {
 
       <main className="page-content">
         <Routes>
-          <Route path="/" element={<HomeSection featuredProducts={featuredProducts} collections={collections} onAdd={handleAddToCart} />} />
-          <Route path="/shop" element={<ShopPage products={products} onAdd={handleAddToCart} />} />
-          <Route path="/collections" element={<CollectionsPage collections={collections} />} />
+          <Route path="/" element={<HomeSection featuredProducts={featuredProducts} familyProducts={familyProducts} collections={collectionCards} onAdd={handleAddToCart} />} />
+          <Route path="/shop" element={<ShopPage products={visibleProducts} onAdd={handleAddToCart} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} categoryOptions={categoryOptions} />} />
+          <Route path="/collections" element={<CollectionsPage collections={collectionCards} />} />
           <Route path="/story" element={<StoryPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/product/:slug" element={<ProductDetailPage onAdd={handleAddToCart} />} />
+          <Route path="/product/:slug" element={<ProductDetailPage products={products} onAdd={handleAddToCart} />} />
           <Route path="/cart" element={<CartPage cart={cart} onUpdate={handleUpdateQuantity} onRemove={handleRemoveItem} totals={totals} />} />
           <Route path="/checkout" element={<CheckoutPage cart={cart} totals={totals} onBack={() => navigate('/cart')} />} />
         </Routes>
@@ -61,7 +67,7 @@ function App() {
 
       <footer className="site-footer">
         <div>
-          <img src="/logo.png" alt="LX SHOT logo" className="footer-logo" />
+          <img src={resolveAssetPath('/logo.png')} alt="LX SHOT logo" className="footer-logo" />
           <p>Intentional Energy.</p>
         </div>
         <div>
@@ -81,7 +87,7 @@ function App() {
   );
 }
 
-function HomeSection({ featuredProducts, collections, onAdd }) {
+function HomeSection({ featuredProducts, familyProducts, collections, onAdd }) {
   return (
     <>
       <section className="hero-card">
@@ -95,7 +101,7 @@ function HomeSection({ featuredProducts, collections, onAdd }) {
           </div>
         </div>
         <div className="hero-visual">
-          <img src="/hero-visual.svg" alt="Luxury coffee packaging illustration" />
+          <img src={resolveAssetPath('/hero-visual.svg')} alt="Luxury coffee packaging illustration" />
         </div>
       </section>
 
@@ -122,6 +128,25 @@ function HomeSection({ featuredProducts, collections, onAdd }) {
         <div className="product-grid">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} onAdd={onAdd} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="section-heading">
+          <p className="eyebrow">Premium family showcase</p>
+          <h2>Whole bean, ground, instant, pods, sticks, and reserve formats.</h2>
+        </div>
+        <div className="family-showcase">
+          {familyProducts.map((product) => (
+            <article className="family-card" key={product.id}>
+              <PackagingVisual product={product} compact />
+              <div>
+                <p className="collection-badge">{product.category}</p>
+                <h3>{product.name}</h3>
+                <p>{product.origin}</p>
+              </div>
+            </article>
           ))}
         </div>
       </section>
@@ -164,13 +189,20 @@ function HomeSection({ featuredProducts, collections, onAdd }) {
   );
 }
 
-function ShopPage({ products, onAdd }) {
+function ShopPage({ products, onAdd, selectedCategory, onSelectCategory, categoryOptions }) {
   return (
     <section className="section-block">
       <div className="section-heading">
         <p className="eyebrow">Shop</p>
         <h1>The LX SHOT collection.</h1>
-        <p>Whole bean, ground, instant, pods, sticks, and gift formats curated for a refined everyday ritual.</p>
+        <p>Whole bean, ground, instant, pods, sticks, reserve, and gift formats curated for a refined everyday ritual.</p>
+      </div>
+      <div className="filter-row" role="tablist" aria-label="Product categories">
+        {categoryOptions.map((category) => (
+          <button key={category} type="button" className={`filter-pill ${selectedCategory === category ? 'active' : ''}`} onClick={() => onSelectCategory(category)}>
+            {category}
+          </button>
+        ))}
       </div>
       <div className="product-grid">
         {products.map((product) => (
@@ -207,8 +239,8 @@ function CollectionsPage({ collections }) {
           <p>Forms designed for convenience without sacrificing craftsmanship.</p>
         </article>
         <article>
-          <h2>Subscription</h2>
-          <p>Keep the ritual consistent with a premium delivery schedule.</p>
+          <h2>Travel</h2>
+          <p>Luxury coffee sticks and instant formats for refined on-the-go rituals.</p>
         </article>
       </div>
     </section>
@@ -264,7 +296,7 @@ function ContactPage() {
   );
 }
 
-function ProductDetailPage({ onAdd }) {
+function ProductDetailPage({ products, onAdd }) {
   const { slug } = useParams();
   const product = products.find((item) => item.slug === slug);
   const [quantity, setQuantity] = useState(1);
@@ -272,6 +304,8 @@ function ProductDetailPage({ onAdd }) {
   if (!product) {
     return <section className="section-block"><h1>Product unavailable</h1></section>;
   }
+
+  const relatedProducts = products.filter((item) => item.id !== product.id).slice(0, 3);
 
   return (
     <section className="product-detail">
@@ -305,6 +339,17 @@ function ProductDetailPage({ onAdd }) {
         <div className="panel-card detail-panel">
           <h3>Shipping and care</h3>
           <p>Complimentary shipping over $120. Packages arrive in premium presentation boxes with careful insulation.</p>
+        </div>
+        <div className="related-block">
+          <h3>Related products</h3>
+          <div className="related-grid">
+            {relatedProducts.map((item) => (
+              <Link key={item.id} to={`/product/${item.slug}`} className="related-card">
+                <PackagingVisual product={item} compact />
+                <p>{item.name}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -440,7 +485,7 @@ function ProductCard({ product, onAdd }) {
 function PackagingVisual({ product, compact = false }) {
   return (
     <div className={`package-visual ${compact ? 'compact' : ''}`}>
-      <img src={product.image} alt={product.imageAlt} className="package-image" />
+      <img src={resolveAssetPath(product.image)} alt={product.imageAlt} className="package-image" />
     </div>
   );
 }

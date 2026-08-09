@@ -101,7 +101,7 @@ function HomeSection({ featuredProducts, familyProducts, collections, onAdd }) {
           </div>
         </div>
         <div className="hero-visual">
-          <img src={resolveAssetPath('/hero-visual.svg')} alt="Luxury coffee packaging illustration" />
+          <img src={resolveAssetPath('/hero-visual.webp')} alt="Premium LX SHOT coffee packaging composition" />
         </div>
       </section>
 

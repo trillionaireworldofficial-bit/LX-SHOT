@@ -438,21 +438,9 @@ function ProductCard({ product, onAdd }) {
 }
 
 function PackagingVisual({ product, compact = false }) {
-  const accent = product.accent || '#b08d3f';
   return (
     <div className={`package-visual ${compact ? 'compact' : ''}`}>
-      <svg viewBox="0 0 260 320" role="img" aria-label={`${product.name} packaging visual`}>
-        <rect x="40" y="34" width="180" height="252" rx="24" fill="#12110f" stroke="#b08d3f" strokeWidth="2" />
-        <rect x="54" y="48" width="152" height="224" rx="20" fill="#1d1a17" stroke="#f4e4ba" strokeWidth="1" />
-        <rect x="76" y="72" width="108" height="68" rx="18" fill={accent} opacity="0.95" />
-        <rect x="84" y="88" width="92" height="34" rx="10" fill="#120f0d" opacity="0.95" />
-        <text x="130" y="108" textAnchor="middle" fontSize="16" fontFamily="Georgia, serif" fill="#f8efd8">LX SHOT</text>
-        <rect x="74" y="154" width="112" height="74" rx="16" fill="#0d0c0b" stroke="#d8b66c" strokeWidth="1" />
-        <text x="130" y="185" textAnchor="middle" fontSize="13" fontFamily="Georgia, serif" fill="#f8efd8">{product.name}</text>
-        <text x="130" y="205" textAnchor="middle" fontSize="11" fontFamily="Arial, sans-serif" fill="#c8b18d">{product.origin}</text>
-        <text x="130" y="224" textAnchor="middle" fontSize="10" fontFamily="Arial, sans-serif" fill="#8f7960">{product.weight}</text>
-        <image href="/logo.png" x="94" y="236" width="72" height="24" preserveAspectRatio="xMidYMid meet" />
-      </svg>
+      <img src={product.image} alt={product.imageAlt} className="package-image" />
     </div>
   );
 }

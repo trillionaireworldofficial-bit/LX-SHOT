@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#080807"/>
+  <rect x="70" y="60" width="220" height="300" rx="28" fill="#12110f" stroke="#9a7340" stroke-width="2"/>
+  <rect x="102" y="90" width="156" height="86" rx="20" fill="#9a7340"/>
+  <rect x="116" y="104" width="128" height="54" rx="13" fill="#16110d"/>
+  <text x="180" y="138" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f8efd8">LX SHOT</text>
+  <rect x="102" y="196" width="156" height="108" rx="18" fill="#0d0c0b" stroke="#dfc289" stroke-width="1.5"/>
+  <text x="180" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#f8efd8">Morning Bloom Japan</text>
+  <text x="180" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c8b18d">Japan · Medium Roast</text>
+  <text x="180" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8f7960">200 g</text>
+  <image href="/logo.png" x="128" y="312" width="104" height="28" preserveAspectRatio="xMidYMid meet"/>
+</svg>

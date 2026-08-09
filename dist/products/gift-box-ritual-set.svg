@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#080807"/>
+  <rect x="78" y="64" width="204" height="292" rx="30" fill="#1a1714" stroke="#8f6d3f" stroke-width="2"/>
+  <rect x="98" y="86" width="164" height="88" rx="18" fill="#8f6d3f"/>
+  <rect x="112" y="100" width="136" height="56" rx="14" fill="#15110d"/>
+  <text x="180" y="132" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f8efd8">LX SHOT</text>
+  <rect x="98" y="196" width="164" height="108" rx="18" fill="#0d0c0b" stroke="#d8b670" stroke-width="1.5"/>
+  <text x="180" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#f8efd8">Gift Box Ritual Set</text>
+  <text x="180" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c8b18d">Assorted · Gift Edition</text>
+  <text x="180" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8f7960">3 formats</text>
+  <image href="/logo.png" x="128" y="312" width="104" height="28" preserveAspectRatio="xMidYMid meet"/>
+</svg>

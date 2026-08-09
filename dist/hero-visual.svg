@@ -1,0 +1,14 @@
+<svg width="720" height="900" viewBox="0 0 720 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" fill="#060606"/>
+  <rect x="160" y="120" width="400" height="660" rx="36" fill="#11100d" stroke="#b08d3f" stroke-width="2"/>
+  <rect x="200" y="180" width="320" height="480" rx="28" fill="#1a1613" stroke="#efd8a4" stroke-width="2"/>
+  <rect x="240" y="220" width="240" height="120" rx="24" fill="#b08d3f"/>
+  <rect x="250" y="240" width="220" height="72" rx="16" fill="#120f0d"/>
+  <text x="360" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#f9eecf">LX SHOT</text>
+  <rect x="240" y="380" width="240" height="180" rx="24" fill="#0d0c0b" stroke="#d8b66c" stroke-width="2"/>
+  <text x="360" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#f9eedb">Intentional Energy</text>
+  <text x="360" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#b89d74">High altitude · Medium roast · Quiet luxury</text>
+  <circle cx="188" cy="232" r="8" fill="#b08d3f"/>
+  <circle cx="524" cy="268" r="10" fill="#b08d3f" opacity="0.8"/>
+  <path d="M220 660 C286 610 434 610 500 660" stroke="#b08d3f" stroke-width="2" fill="none"/>
+</svg>

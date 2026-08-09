@@ -1,0 +1,770 @@
+===== DOCUMENT 06.pdf =====
+DOCUMENT 06 
+AI_DEVELOPMENT_RULES.md 
+LX SHOT Website Development Constitution 
+Version 1.0 
+This document defines the mandatory engineering, design, branding, UX, animation, 
+performance, and quality standards for the LX SHOT website. 
+Every AI agent contributing to this repository must follow these rules without exception. 
+ 
+1. PROJECT MISSION 
+You are not building a typical ecommerce website. 
+You are building the official flagship website for LX SHOT, an ultra-premium specialty coffee 
+brand centered on high-altitude Arabica, intentional energy, quiet luxury, and refined 
+craftsmanship. All design and implementation decisions must reinforce these brand values as 
+described in the Brand Story and Brand Tone Guide.  
+ 
+2. NEVER CHANGE THE BRAND 
+The AI must never: 
+• redesign the logo  
+• recolor the logo  
+• stretch the logo  
+• replace the logo  
+• invent another brand identity  
+• use placeholder logos  
+• substitute generic coffee branding  
+Every branded surface must display the authentic LX SHOT identity. 
+ 
+3. PREMIUM DESIGN ONLY 
+Everything must feel luxury. 
+Not trendy. 
+Not playful. 
+Not colorful. 
+Not cheap. 
+Every page should feel like entering a premium boutique. 
+ 
+4. NEVER USE CHEAP DESIGN PATTERNS 
+Never use: 
+  bright red buttons 
+  neon colors 
+  rounded cartoon buttons 
+  oversized emojis 
+  excessive gradients 
+  random icons 
+  clutter 
+  generic ecommerce templates 
+  cheap shadows 
+  stock-style layouts 
+ 
+5. UX PRINCIPLES 
+Every interaction must feel intentional. 
+Every animation must have purpose. 
+Every page must breathe. 
+Whitespace is part of the design. 
+Luxury comes from restraint. 
+ 
+6. ANIMATION PRINCIPLES 
+Animations should never distract. 
+Animations should guide attention. 
+Use: 
+Smooth Fade 
+Luxury Scale 
+Soft Blur 
+Opacity 
+Parallax 
+Micro Interaction 
+Hover Elevation 
+Luxury Glow 
+Cursor Magnetism 
+Page Reveal 
+Loading Motion 
+Never use: 
+Bounce 
+Flash 
+Shake 
+Random Rotations 
+Fast Zooms 
+Exaggerated Effects 
+ 
+7. CODE QUALITY 
+Every component must be: 
+Reusable 
+Modular 
+Typed 
+Documented 
+Accessible 
+Scalable 
+Maintainable 
+Readable 
+Avoid duplicated code. 
+Use component composition. 
+Follow best React practices. 
+ 
+8. PERFORMANCE RULES 
+Performance is mandatory. 
+Target: 
+95–100 Google Lighthouse Performance 
+95+ Accessibility 
+95+ SEO 
+95+ Best Practices 
+Optimize: 
+Images 
+Fonts 
+Animations 
+JavaScript 
+Lazy loading 
+Code splitting 
+Prefetching 
+ 
+9. MOBILE FIRST 
+The website must be exceptional on: 
+Desktop 
+Laptop 
+Tablet 
+Mobile 
+Large Mobile 
+Small Mobile 
+No horizontal scrolling. 
+No broken layouts. 
+No overlapping content. 
+ 
+10. PRODUCT PHOTOGRAPHY 
+Every product image must appear professionally photographed. 
+Requirements: 
+Studio lighting 
+Premium shadows 
+Matte black packaging 
+Gold foil reflections 
+Luxury coffee beans 
+Natural steam 
+Warm mood 
+High contrast 
+Ultra HD 
+No low-resolution images. 
+No obvious stock photos. 
+ 
+11. PACKAGING 
+Every package should look retail-ready. 
+Every product should display: 
+Front 
+Back 
+Side 
+Perspective 
+Lifestyle 
+Close-up 
+Packaging materials should appear premium: 
+Soft-touch matte finish 
+Gold foil 
+Embossing 
+Minimal typography 
+Luxury labels 
+ 
+12. ECOMMERCE EXPERIENCE 
+Shopping should feel effortless. 
+Every page should encourage confidence. 
+The checkout should require as few steps as practical. 
+Support: 
+Guest Checkout 
+Customer Accounts 
+Saved Addresses 
+Gift Cards 
+Subscriptions 
+Rewards 
+Coupons 
+Wishlist 
+Recently Viewed 
+Related Products 
+Order Tracking 
+ 
+13. ACCESSIBILITY 
+Follow WCAG AA guidelines. 
+Ensure: 
+Keyboard navigation 
+Screen reader support 
+Focus states 
+Color contrast 
+Alt text 
+Semantic HTML 
+Accessible forms 
+ 
+14. SEO 
+Every page must include: 
+Meta Title 
+Meta Description 
+Open Graph 
+Twitter Cards 
+Structured Data 
+Canonical URLs 
+Optimized headings 
+Readable URLs 
+XML sitemap 
+Robots configuration 
+ 
+15. RESPONSIVE IMAGES 
+All images must: 
+Use next/image 
+Be optimized 
+Be lazy-loaded 
+Use modern formats 
+Scale properly 
+Maintain quality 
+ 
+16. AI IMAGE POLICY 
+If placeholder assets are required: 
+Generate luxury coffee imagery. 
+Never use low-quality placeholders. 
+Never use cartoon illustrations. 
+Every generated image must resemble a premium commercial campaign. 
+ 
+17. COMPONENT LIBRARY 
+Create reusable components. 
+Examples: 
+Button 
+Card 
+Product Card 
+Collection Card 
+Navigation 
+Footer 
+Modal 
+Drawer 
+Toast 
+Badge 
+Accordion 
+Carousel 
+Product Gallery 
+Review Card 
+Newsletter 
+Each component must be reusable. 
+ 
+18. TYPOGRAPHY 
+Typography should express luxury. 
+Large headings. 
+Generous spacing. 
+Elegant hierarchy. 
+Comfortable reading width. 
+No compressed layouts. 
+ 
+19. WHITESPACE 
+Whitespace is mandatory. 
+Never fill every area. 
+Luxury brands use negative space. 
+ 
+20. NEVER SHIP PLACEHOLDER CONTENT 
+Never leave: 
+Lorem Ipsum 
+Placeholder images 
+Fake reviews 
+Broken links 
+Sample products 
+Dummy logos 
+Everything must be production ready. 
+ 
+21. GITHUB WORKFLOW 
+Before making major changes: 
+1. Read all specification documents.  
+2. Summarize the requested work.  
+3. Identify dependencies.  
+4. Build in small, reviewable commits.  
+5. Keep commits focused and descriptive.  
+6. Wait for approval before major structural refactors.  
+ 
+22. QUALITY CHECK BEFORE EVERY COMMIT 
+Before completing any task, verify: 
+• No console errors.  
+• No TypeScript errors.  
+• No broken links.  
+• No layout overflow.  
+• No accessibility regressions.  
+• Responsive behavior verified.  
+• Performance impact considered.  
+ 
+23. WHAT SUCCESS LOOKS LIKE 
+When a visitor lands on lxshot.com, they should immediately feel: 
+• This is a world-class specialty coffee brand.  
+• The products appear crafted with exceptional care.  
+• The experience is calm, luxurious, and trustworthy.  
+• Purchasing feels simple and secure.  
+• The website reflects the values of purity, precision, origin, and intentional energy 
+established by LX SHOT.  
+ 
+Additional Recommendation 
+I would also add one small file to your repository that is never edited by the AI: 
+PROJECT_MEMORY .md 
+This file serves as the project's permanent memory and contains: 
+• Final brand decisions.  
+• Approved color codes.  
+• Approved typography.  
+• Logo usage rules.  
+• Completed features.  
+• Future roadmap.  
+• Features explicitly rejected.  
+• Naming conventions.  
+• File and folder standards.  
+• Deployment details.  
+• Domain information.  
+• Contact information.  
+• Third-party integrations.  
+Every time you approve a major design or development decision, add it to 
+PROJECT_MEMORY .md. Before starting any new task, instruct the GitHub AI agent to read both 
+PROJECT_MEMORY .md and the six specification documents. This helps maintain consistency 
+over long development sessions and prevents the AI from undoing earlier approved work. 
+With these six core documents plus PROJECT_MEMORY .md, you'll have a documentation 
+package that closely resembles what a professional design agency would hand over to an 
+engineering team before building a premium ecommerce website. 
+ 
+
+===== Document 01.pdf =====
+Document 01 
+LX SHOT MASTER PROJECT BRIEF 
+Estimated Length: 25–40 pages 
+This document will include: 
+• Brand Vision  
+• Brand Mission  
+• Brand Values  
+• Brand Story (based on your uploaded document)  
+• Business Goals  
+• Website Objectives  
+• Target Audience  
+• Luxury Positioning  
+• Customer Personas  
+• Competitor Inspiration  
+• Brand Personality  
+• Tone of Voice (aligned with your uploaded tone guide)  
+• Complete UX Goals  
+• UI Principles  
+• User Journey  
+• Brand Psychology  
+• Premium Customer Experience  
+• Technical Stack  
+• Development Standards  
+• Performance Goals  
+• SEO Goals  
+• Accessibility  
+• Website Success Metrics  
+This becomes the project's foundation. 
+ 
+
+===== Document 02.pdf =====
+Document 02 
+LX SHOT DESIGN SYSTEM & BRAND GUIDELINES 
+Estimated Length: 40–60 pages 
+This document will include: 
+Logo Rules 
+• Correct usage  
+• Minimum spacing  
+• Black version  
+• Gold version  
+• White version  
+• Dark background  
+• Light background  
+• Incorrect usage  
+Color Palette 
+Luxury blacks 
+Luxury gold 
+Espresso brown 
+Warm ivory 
+Neutral greys 
+Success colors 
+Warning colors 
+Error colors 
+Background system 
+Gradient system 
+Luxury glow system 
+Typography 
+Primary font 
+Secondary font 
+Display font 
+Heading scale 
+Paragraph scale 
+Spacing rules 
+Letter spacing 
+Grid System 
+Desktop 
+Tablet 
+Mobile 
+Container widths 
+Margins 
+Spacing 
+UI Components 
+Buttons 
+Cards 
+Product Cards 
+Collection Cards 
+Inputs 
+Dropdowns 
+Accordions 
+Tabs 
+Badges 
+Pagination 
+Search 
+Filters 
+Wishlist Button 
+Cart Button 
+Checkout Buttons 
+Icon System 
+Luxury minimal icons 
+Payment icons 
+Shipping icons 
+Coffee icons 
+Animation Rules 
+Hover 
+Scroll 
+Loading 
+Cursor 
+Product Hover 
+Image Hover 
+Button Hover 
+Smooth transitions 
+Photography Direction 
+Studio lighting 
+Lifestyle 
+Packaging 
+Coffee beans 
+Macro 
+Farm photography 
+Image Style 
+Every image must look premium. 
+Nothing stock-looking. 
+Everything cinematic. 
+ 
+
+===== Document 03.pdf =====
+Document 03 
+LX SHOT WEBSITE ARCHITECTURE & E-COMMERCE SYSTEM 
+Estimated Length: 50–70 pages 
+Every page documented. 
+Home 
+Shop 
+Collections 
+Whole Bean 
+Ground Coffee 
+Instant Coffee 
+Coffee Pods 
+Coffee Sticks 
+Gift Boxes 
+Subscriptions 
+Wholesale 
+About 
+Story 
+Origin 
+Blog 
+FAQ 
+Contact 
+Shipping 
+Returns 
+Privacy 
+Terms 
+404 
+Search 
+Wishlist 
+Account 
+Dashboard 
+Checkout 
+Cart 
+Rewards 
+Order Tracking 
+Each page includes: 
+Purpose 
+Layout 
+Sections 
+Interactions 
+Animations 
+Mobile version 
+Desktop version 
+Tablet version 
+SEO requirements 
+Performance requirements 
+E-Commerce 
+Shopping Cart 
+Checkout 
+Guest Checkout 
+Stripe 
+Apple Pay 
+Google Pay 
+Visa 
+Mastercard 
+American Express 
+PayPal 
+Klarna 
+Afterpay 
+Affirm 
+Coupons 
+Rewards 
+Subscriptions 
+Reviews 
+Wishlist 
+Recently Viewed 
+Cross Selling 
+Upselling 
+Order Tracking 
+Invoices 
+Email Templates 
+Customer Dashboard 
+ 
+
+===== Document 04.pdf =====
+Document 04 
+LX SHOT HOMEPAGE & ALL WEBSITE PAGES BLUEPRINT 
+Estimated Length: 60–80 pages 
+This is the visual blueprint. 
+Hero 
+Navigation 
+Luxury Video 
+Headline 
+CTA 
+Collections 
+Featured Products 
+Best Sellers 
+Origin Story 
+Coffee Philosophy 
+Packaging Showcase 
+Coffee Process 
+Subscription Section 
+Reviews 
+Instagram 
+Newsletter 
+Footer 
+Every section includes: 
+Exact layout 
+Typography 
+Spacing 
+Animation 
+Hover effects 
+Images 
+Video 
+Background 
+Lighting 
+Shadows 
+Glass effects 
+Micro interactions 
+Everything explained. 
+ 
+
+===== Document 05.pdf =====
+Document 05 
+LX SHOT PRODUCT CATALOG, PACKAGING & CONTENT LIBRARY 
+Estimated Length: 80–120 pages 
+Complete product system. 
+Product Categories 
+Whole Bean 
+Ground Coffee 
+Instant Coffee 
+Coffee Pods 
+Coffee Stick Packs 
+Luxury Gift Boxes 
+Limited Editions 
+Reserve Collection 
+Accessories 
+Brewing Equipment 
+Products 
+Approximately 50 premium products. 
+Every product includes: 
+Product Name 
+Origin 
+Roast 
+Altitude 
+Flavor Notes 
+Body 
+Acidity 
+Brewing Guide 
+Description 
+Short Description 
+SEO Description 
+Meta Title 
+Meta Description 
+Packaging Size 
+100 g 
+200 g 
+500 g 
+Luxury Tin 
+Luxury Tube 
+Travel Pack 
+Gift Box 
+Subscription Pack 
+Packaging 
+Matte black 
+Gold foil 
+Embossed logo 
+Luxury labels 
+Premium box interiors 
+Premium shipping cartons 
+Gift wrapping 
+Images Required 
+Front 
+Back 
+Side 
+Lifestyle 
+Studio 
+Macro 
+Coffee beans 
+Steam 
+Brewing 
+Packaging close-up 
+Product Animations 
+Hover 
+Rotation 
+Zoom 
+3D preview 
+360° view 
+ 
+Final Result 
+These five documents together will serve as a complete "source of truth" for the GitHub AI 
+agent. They will define every important aspect of the website—from branding and visual 
+identity to ecommerce flows, page layouts, product presentation, packaging, animations, and 
+technical standards—while staying faithful to the luxury positioning, calm tone, and specialty 
+coffee identity established in your uploaded LX SHOT brand story and tone guide.  
+ 
+
+===== LX SHOT BRAND STORY.pdf =====
+
+
+
+===== LX SHOT BRAND TONE COMPLETE GUIDE.pdf =====
+       LX SHOT — Brand Tone Guide 
+Ultra-Premium Luxury Specialty Coffee 
+ 
+   Brand Essence (Core Identity) 
+Brand Name 
+LX SHOT 
+Brand Positioning 
+Ultra-premium luxury specialty coffee crafted for clarity, balance, and refined energy. 
+Brand Promise 
+Every cup delivers intention, precision, and purity — without compromise. 
+Brand Personality 
+LX SHOT is: 
+• Confident 
+• Calm 
+• Intelligent 
+• Minimalist 
+• Sophisticated 
+• Honest 
+LX SHOT is never: 
+• Loud 
+• Trendy 
+• Cheap 
+• Over-scientific 
+• Aggressive 
+ 
+   LX SHOT Core Values 
+       Purity 
+Nothing added. Nothing hidden. 
+   Origin Respect 
+Coffee is grown slowly, selected intentionally. 
+      Precision 
+Roasting is craft, not automation. 
+    Clarity 
+Energy without chaos. 
+🕊 Simplicity 
+Luxury through restraint. 
+ 
+   LX SHOT Voice & Tone Rules 
+🗣 Voice Style 
+LX SHOT speaks like: 
+A calm, knowledgeable expert who never needs to shout. 
+Tone Characteristics 
+• Short sentences 
+• Confident statements 
+• Minimal adjectives 
+• Thoughtful pauses 
+• Elegant rhythm 
+ 
+   Words LX SHOT Uses Often 
+• intentional 
+• refined 
+• pure 
+• origin 
+• crafted 
+• balanced 
+• clarity 
+• ritual 
+• quiet luxury 
+• precision 
+  Words LX SHOT Avoids 
+• cheap 
+• boost 
+• crazy energy 
+• supercharged 
+• extreme 
+• miracle 
+• cure 
+• instant 
+ 
+   Tagline System (Ultra-Luxury Options) 
+Here are premium tagline directions designed for luxury perception: 
+      Signature Tagline (Main Choice) 
+“Intentional Energy.” 
+Simple. Modern. Powerful. 
+ 
+      Luxury Positioning Taglines 
+Choose one depending on vibe: 
+• “Pure Arabica. Refined Power.” 
+• “Crafted for Clarity.” 
+• “Precision in Every Shot.” 
+• “Where Origin Meets Intention.” 
+• “Quiet Luxury in a Cup.” 
+ 
+      Premium Lifestyle Taglines 
+• “Coffee Without Compromise.” 
+• “Beyond the Bean.” 
+• “A Ritual of Quality.” 
+ 
+   Messaging Framework (How LX SHOT Speaks) 
+   Brand Introduction Example 
+LX SHOT is an ultra-premium specialty coffee brand dedicated to purity, origin, and precision. 
+Crafted from high-altitude Arabica beans and roasted in small batches, LX SHOT delivers a 
+refined coffee experience designed for clarity, balance, and everyday excellence. 
+ 
+       Product Description Example 
+Ethiopia Guji Uraga. 
+100% Arabica. Medium roast. 
+Carefully fermented, intentionally roasted, and naturally smooth. 
+A coffee shaped by altitude, time, and restraint. 
+ 
+   Visual Identity Direction (Luxury Look) 
+      Color Palette 
+Luxury coffee brands typically use: 
+• Matte black 
+• Deep espresso brown 
+• Champagne gold 
+• Warm ivory 
+• Forest green (optional accent) 
+     Typography Style 
+Use fonts like: 
+• Serif luxury → Playfair Display, Canela, Bodoni 
+• Modern minimalist → Inter, Neue Haas Grotesk, Helvetica Neue 
+           Design Principles 
+• Minimal text 
+• High whitespace 
+• No clutter 
+• Strong hierarchy 
+• Embossed foil accents 
+ 
+   Brand Archetype (Psychology) 
+LX SHOT Archetype: 
+The Alchemist 
+Meaning: 
+Turning raw origin into refined experience. 
+This archetype signals: 
+• premium 
+• thoughtful 
+• rare 
+• intentional 
+ 
+   Customer Identity (Who Buys LX SHOT) 
+LX SHOT is for people who: 
+• drink coffee consciously 
+• appreciate craftsmanship 
+• value calm focus 
+• dislike loud brands 
+• want subtle luxury 
+This helps guide marketing later. 
+ 
+   Example Marketing Lines (Ready to Use) 
+Website Hero Section 
+Ultra-Premium Arabica Crafted for Clarity. 
+Social Caption 
+Not louder. Just better. 
+Packaging Line 
+High altitude. Slow growth. Intentional roast. 
+Brand Manifesto Line 
+Luxury is not excess. It is precision. 
+ 
+    Final Recommendation (Brand Direction Summary) 
+Your strongest luxury identity combination: 
+   Positioning: Ultra-premium specialty coffee 
+   Tagline: Intentional Energy 
+   Tone: Calm, minimal, confident 
+   Visual style: Black + gold + whitespace 
+   Story: Origin → precision → ritual 
+ 
+
